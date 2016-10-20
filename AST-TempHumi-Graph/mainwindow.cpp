@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 
 #include <QtNetwork/QUdpSocket>
+#include <QtNetwork/QHostAddress>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -25,7 +26,7 @@ void MainWindow::initSocket(int port)
  {
      udpSocket = new QUdpSocket(this);
      //udpSocket->bind(QHostAddress::Broadcast, port);
-     udpSocket->bind(QHostAddress::AnyIPv4, port);
+     udpSocket->bind(QHostAddress::Any, port);
      connect(udpSocket, SIGNAL(readyRead()),
              this, SLOT(readPendingDatagrams()));
      qDebug() << "ouvert";

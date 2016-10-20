@@ -4,9 +4,10 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui widgets network printsupport
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets network printsupport
+
+#greaterThan(QT_MAJOR_VERSION, 4): QT += widgets network printsupport
 
 TARGET = AST-TempHumi-Graph
 TEMPLATE = app

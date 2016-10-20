@@ -9,6 +9,8 @@
 #ifndef UI_MAINWINDOW_H
 #define UI_MAINWINDOW_H
 
+#define QStringLiteral QString::fromUtf8
+
 #include <QtCore/QVariant>
 #include <QAction>
 #include <QApplication>
@@ -24,6 +26,8 @@
 #include <QTextEdit>
 #include <QToolBar>
 #include <QWidget>
+#include <QFileDialog>
+#include <QMessageBox>
 #include "qcustomplot.h"
 
 
