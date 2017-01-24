@@ -3,6 +3,7 @@
 
 #include <QtGui/QMainWindow>
 #include <QtGui/QLabel>
+#include <stdint.h>
 
 #include "qcustomplot.h"
 

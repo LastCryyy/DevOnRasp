@@ -83,11 +83,14 @@ QString MainWindow::process_data(QByteArray data)
     Acx_txt.setNum(Acx.f1);
     Acy_txt.setNum(Acy.f1);
     Acz_txt.setNum(Acz.f1);
+     qDebug() << Acz.fdata[0] << "," << Acz.fdata[1];
 
     curtime = heure.elapsed();
     heuretxt.setNum(curtime);
     *outStream << curtime << "," << Acx.f1 << "," << Acy.f1 << "," << Acz.f1 << "\n";
 
+
+    //modifications pour calcul de traitement a partir des donnees brutes ci dessous
     ui->txt_output->append(heuretxt + ";"  + Acx_txt + " ; " + Acy_txt + " ; " + Acz_txt);
     //qDebug() << temp_txt;
     return "";
